@@ -34,8 +34,8 @@ try {
 
     const options={
         httpOnly:true,
-        secure:false,
-        sameSite:"lax",
+        secure:true,
+        sameSite:"none",
         maxAge:7*24*60*60*1000
     }
 
@@ -75,8 +75,8 @@ try {
 
     const options={
         httpOnly:true,
-        secure:false,
-        sameSite:"lax",
+        secure:true,
+        sameSite:"none",
         maxAge:7*24*60*60*1000
     }
 
@@ -94,8 +94,8 @@ const logOut = async(req,res)=>{
 try {
     const options={
         httpOnly:true,
-        secure:false,
-        sameSite:"lax",
+        secure:true,
+        sameSite:"none",
         maxAge:7*24*60*60*1000
     }
     return res.
