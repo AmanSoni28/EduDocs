@@ -29,12 +29,6 @@ app.use('/api/user', userRouter)
 import pdfRouter from './routers/pdf.router.js'
 app.use('/api/pdf', pdfRouter)
 
-
-// app.listen(port,()=>{
-//     connectDb()
-//     console.log(`listen at port ${port}` );
-// })
-
 const startServer = async () => {
   try {
     // MongoDB connect
