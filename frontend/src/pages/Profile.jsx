@@ -1,13 +1,20 @@
 import { useSelector } from "react-redux";
 import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import bgImage from '/Edu_Upload.png'
 
 
 const Profile = () => {
   const {userData}=useSelector((state)=>state.user)
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 py-10">
+    <div className="min-h-screen flex items-center justify-center px-4 relative"
+         style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+        >
       <div className="bg-white p-8 rounded-2xl max-w-xl shadow-md w-full relative">
         <div className="flex flex-col items-center text-center "> 
          <div className="w-32 h-32 border-4 border-black rounded-full flex items-center justify-center text-[40px] bg-gray-200 cursor-pointer mx-auto">

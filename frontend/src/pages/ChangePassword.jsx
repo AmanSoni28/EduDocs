@@ -4,6 +4,7 @@ import { serverUrl } from "../main.jsx";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import bgImage from '/Edu_Upload.png'
 
 const ChangePassword = () => {
   const navigate = useNavigate();
@@ -63,7 +64,13 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 relative"
+     style={{
+      backgroundImage: `url(${bgImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}
+    >
       <div className="relative w-full max-w-md bg-white shadow-2xl rounded-2xl p-8">
 
         {/* Back Button */}

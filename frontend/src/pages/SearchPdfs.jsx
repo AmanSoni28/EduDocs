@@ -3,6 +3,9 @@ import axios from "axios";
 import { serverUrl } from "../main.jsx";
 import PdfCard from "../Component/PdfCard.jsx";
 import toast from "react-hot-toast";
+import { FaArrowLeft } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
 
 const SearchPdf = () => {
   const [filters, setFilters] = useState({
@@ -13,6 +16,7 @@ const SearchPdf = () => {
 
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFilters({
@@ -56,6 +60,7 @@ const SearchPdf = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-8">
+      <FaArrowLeft className="size-6" onClick={()=>navigate('/')}/>
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
